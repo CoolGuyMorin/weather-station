@@ -20,10 +20,10 @@ fetch(API_URL)
 
 function displayHumidity(data){
     const hum = data["last_value"];
-    const tempDiv = document.getElementById("humidity");
+    const humDiv = document.getElementById("humidity");
 
     const heading = document.createElement("h6");
     heading.innerHTML = "Humidity = " + hum + " %";
-    tempDiv.appendChild(heading);
+    humDiv.appendChild(heading);
 
 }
