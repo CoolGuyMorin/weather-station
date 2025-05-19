@@ -17,6 +17,40 @@
     <li>Add past data to website</li>
 </ul>
 
+            <h3>Past Progress:</h3>
+<h4>2025</h4>
+<h5>May</h5>
+<h6>Monday, May 19th</h6>
+<p>Updating website to include more information about the project.</p>
+<h6>Sunday, May 18th</h6>
+<p>Setup Github pages to create website. Got index page setup with the stylesheet. Spent 17723492312387 hours trying to get 3 live data points to appear on website, drafting the website on vscode.</p>
+<p>Finally got data to display by using javascript fetch function, which then broke when updating actual Github page, as the top secret key used to access the data was in the code. Spent another while to fix the code so that it could get the data without the top secret key. Eventually worked.</p>
+
+<pre><code>fetch(https://io.adafruit.com/api/v2/coolguy_morin4/feeds/temperature)
+    .then(response => {
+    if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json();
+})
+.then(data => {
+    console.log("Fetched Data:", data); // Print data to console
+    //display data on a webpage
+    displayTemp(data)
+})
+.catch(error => {
+    console.error("Error fetching data:", error);
+});
+
+function displayTemp(data){
+    const temp = data["last_value"];
+    const tempDiv = document.getElementById("temperature");
+
+    const heading = document.createElement("h6");
+    heading.innerHTML = "Temperature = " + temp + " degrees Celcius";
+    tempDiv.appendChild(heading);
+
+}</code></pre>
 
 
     </body>
