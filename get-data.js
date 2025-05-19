@@ -87,7 +87,7 @@ function displayPress(data3){
     const pressDiv = document.getElementById("pressure");
 
     const heading = document.createElement("h6");
-    heading.innerHTML = "Pressure = " + press + " ";
+    heading.innerHTML = "Pressure = " + press + " HPa";
     pressDiv.appendChild(heading);
 
 }
