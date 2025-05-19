@@ -21,7 +21,7 @@ fetch(API_URL)
 
 function displayData(data){
     const display = data["last_value"];
-    const displayDiv = document.getElementById("temperature");
+    const displayDiv = document.getElementById("humidity");
 
     const heading = document.createElement("h6");
     heading.innerHTML = "Temperature = " + display + " degrees Celcius";
