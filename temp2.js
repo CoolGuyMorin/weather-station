@@ -12,19 +12,19 @@ fetch(API_URL)
 .then(data => {
     console.log("Fetched Data:", data); // Print data to console
     // Optionally display data on a webpage
-    displayTemp(data)
+    displayData(data)
     //document.getElementById("temperature").innerText = JSON.stringify(data["last_value"], null, 2);
 })
 .catch(error => {
     console.error("Error fetching data:", error);
 });
 
-function displayTemp(data){
-    const temp = data["last_value"];
-    const tempDiv = document.getElementById("temperature");
+function displayData(data){
+    const display = data["last_value"];
+    const displayDiv = document.getElementById("temperature");
 
     const heading = document.createElement("h6");
-    heading.innerHTML = "Temperature = " + temp + " degrees Celcius";
-    tempDiv.appendChild(heading);
+    heading.innerHTML = "Temperature = " + display + " degrees Celcius";
+    displayDiv.appendChild(heading);
 
 }
