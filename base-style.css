@@ -13,3 +13,13 @@ h1{
     border-bottom: 3px solid black;
     background-image: image();
 }
+pre {
+      background-color: #272822;
+      color: #48e7e7;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: "Courier New", Courier, monospace;
+    }
