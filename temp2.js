@@ -1,5 +1,5 @@
 // Replace with your Adafruit IO Key and Feed Name
-const AIO_KEY = "aio_PEOF58SznwjXoKdfQdXSJXBcLzrV";
+const AIO_KEY = "aio_ODBm53WIY1M9jTe81UvUvOWSdhQj";
 
 // Adafruit IO REST API URL
 const API_URL = `https://io.adafruit.com/api/v2/coolguy_morin4/feeds/temperature`;
