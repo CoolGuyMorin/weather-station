@@ -1,17 +1,8 @@
-// Replace with your Adafruit IO Key and Feed Name
-const AIO_KEY = "aio_ODBm53WIY1M9jTe81UvUvOWSdhQj";
-
 // Adafruit IO REST API URL
 const API_URL = `https://io.adafruit.com/api/v2/coolguy_morin4/feeds/temperature`;
 
 // Fetch data from Adafruit IO
-fetch(API_URL, {
-    method: "GET",
-    headers: {
-        "X-AIO-Key": AIO_KEY,
-        "Content-Type": "application/json"
-    }
-})
+fetch(API_URL)
 .then(response => {
     if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
